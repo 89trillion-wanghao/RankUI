@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.IO;
 using LitJson;
 using UnityEngine;
@@ -14,6 +15,9 @@ public class GameManager : MonoBehaviour
     private int timeLeft;           // 游戏剩余时间，单位为秒
     void Awake()
     {
+
+        //获取设置当前屏幕分辩率 
+
         // 初始化单例
         istance = this;
         // 获取Json数据
@@ -21,6 +25,11 @@ public class GameManager : MonoBehaviour
         // 从Json里获取游戏的倒计时
         timeLeft = r.countDown;
         StartCoroutine(TimeCountDown());
+
+    }
+
+    private void Update()
+    {
 
     }
 
