@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager istance = null;
     public Text timeCountDown;      // 计时器Text引用
-    
     public Root r;                  // 游戏资源对象
     private int timeLeft;           // 游戏剩余时间，单位为秒
     void Awake()
