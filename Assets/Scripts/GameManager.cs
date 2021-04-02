@@ -25,7 +25,9 @@ public class GameManager : MonoBehaviour
 
     }
 
-    // 获取Json
+    /// <summary>
+    /// 获取JSON中的数据
+    /// </summary>
     private void GetJson()
     {
         StreamReader streamreader = new StreamReader( Application.streamingAssetsPath+Constant.JSON_PATH);//读取数据，转换成数据流
@@ -33,7 +35,10 @@ public class GameManager : MonoBehaviour
         r = JsonMapper.ToObject<Root>(js);//读取
     }
     
-    // 倒计时
+    /// <summary>
+    /// 倒计时功能
+    /// </summary>
+    /// <returns>等待1s</returns>
     IEnumerator TimeCountDown()
     {
         while (timeLeft>0)
