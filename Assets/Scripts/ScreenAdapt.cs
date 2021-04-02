@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class ScreenAdapt : MonoBehaviour
 {
+    public CanvasScaler canvasScalerTemp;
     void Awake () 
     {
         float standardWidth = 1080f;           //初始标准宽度
@@ -25,8 +26,7 @@ public class ScreenAdapt : MonoBehaviour
         {
             adjustor = standardAspect / deviceAspect;
         }
- 
-        CanvasScaler canvasScalerTemp = transform.GetComponent<CanvasScaler>();
+        
         
         // 判断是否采用高度适配还是宽度适配
         if (adjustor == 0)
